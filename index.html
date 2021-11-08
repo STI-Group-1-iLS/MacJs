@@ -11,6 +11,39 @@
      <script src="https://kit.fontawesome.com/c49632361b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	
+	
+	<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "340391103303249");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
+	
+	
+	
      <nav class="navbar">
      	<div class="navbar_container">
 
@@ -307,7 +340,7 @@
                 <div class="footer_link-wrapper">
                      <div class="footer_link-items">
                           <h2>About Us</h2>
-                          <a>Mac go Grill</a>
+                          <a>Mac J's Grill</a>
                           <a>Brgy. Anus San Jose, 4227</a>
                           <a>Batangas City, Philippines</a>
                      </div>
